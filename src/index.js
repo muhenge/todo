@@ -12,16 +12,19 @@ const todoLists = [
   {
     description: 'Work on php laravel',
     completed: true,
-    index: 1,
+    index: 8,
   },
   {
     description: 'Work on java',
     completed: false,
-    index: 1,
+    index: 6,
   },
 ];
 
-// eslint-disable-next-line no-restricted-syntax
-for (const todo of todoLists) {
-  console.log(todo);
-}
+//console.log(todoLists.sort());
+
+
+todoLists.forEach(todo => {
+	const val = Object.values(todo.index);
+  console.log(val);
+});
