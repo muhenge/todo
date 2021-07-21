@@ -1,3 +1,7 @@
+// eslint-disable-next-line no-unused-vars
+import _ from 'lodash';
+import './style.css';
+
 const todoLists = [
   {
     description: 'Working on javascript todo app',
@@ -23,8 +27,9 @@ const todoLists = [
 
 //console.log(todoLists.sort());
 
-
 todoLists.forEach(todo => {
-	const val = Object.values(todo.index);
-  console.log(val);
+  const li = document.createElement('li');
+  const ul = document.getElementById('todo-lists');
+  li.innerText = todo.description;
+  ul.appendChild(li);
 });
