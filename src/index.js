@@ -25,8 +25,6 @@ const todoLists = [
   },
 ];
 
-//console.log(todoLists.sort());
-
 todoLists.forEach(todo => {
   const li = document.createElement('li');
   const ul = document.getElementById('todo-lists');
