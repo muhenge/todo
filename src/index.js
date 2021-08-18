@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 import './style.css';
+import compare from './sorted';
 
 const todoLists = [
   {
@@ -25,25 +26,14 @@ const todoLists = [
   },
 ];
 
-const compare = (x, y) => {
-  const indexX = x.index;
-  const indexY = y.index;
-
-  let comp = 0;
-  if (indexX > indexY) {
-    comp = 1;
-  } else if (indexX < indexY) {
-    comp = -1;
-  }
-  return comp;
-};
-
 const sorted = todoLists.sort(compare);
+const ul = document.getElementById('todo-lists');
 
 window.onload = () => {
   sorted.forEach(todo => {
     const li = document.createElement('li');
-    const ul = document.getElementById('todo-lists');
+    li.setAttribute('class', 'one-task');
+    li.setAttribute('draggable', 'true');
     li.innerText = todo.description;
     ul.appendChild(li);
   });
