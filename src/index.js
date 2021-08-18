@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 import './style.css';
-import { compare, dragging } from './drag';
+import compare from './sorted';
 
 const todoLists = [
   {
@@ -32,18 +32,9 @@ const ul = document.getElementById('todo-lists');
 window.onload = () => {
   sorted.forEach(todo => {
     const li = document.createElement('li');
-    const childd = ul.children;
-    const all = [...childd];
-    for (const i in all) {
-      all[i].setAttribute('id', 'list' + i);
-    }
     li.setAttribute('class', 'one-task');
     li.setAttribute('draggable', 'true');
     li.innerText = todo.description;
     ul.appendChild(li);
   });
-
-  dragging();
 };
-
-;
