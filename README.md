@@ -17,7 +17,7 @@
 - Run `git clone https://github.com/muhenge/todo.git` in your terminal
 - cd into the folder
 - Run `npm install`
-- Run `npm build`
+- Run `npm run build`
 - Run `npm start`
 
 ### Author
