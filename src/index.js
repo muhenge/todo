@@ -32,9 +32,12 @@ const ul = document.getElementById('todo-lists');
 window.onload = () => {
   sorted.forEach(todo => {
     const li = document.createElement('li');
+    const check = document.createElement('input');
+    check.setAttribute('type', 'checkbox');
     li.setAttribute('class', 'one-task');
     li.setAttribute('draggable', 'true');
     li.innerText = todo.description;
+    li.appendChild(check);
     ul.appendChild(li);
   });
 };
